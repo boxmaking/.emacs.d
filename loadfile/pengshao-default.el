@@ -25,8 +25,10 @@
 
 
 ;在标题栏提示你目前在什么位置
-(setq frame-title-format "pengshao@%n%b")
-;;;设置标题栏显示文件的完整路径名
+;(setq frame-title-format "pengshao@%n%b")
+
+
+
 ;; buffer name (if the buffer isn't visiting a file)
 (setq frame-title-format
       '("" " 上马提枪, 去干他娘 - "
