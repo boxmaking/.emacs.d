@@ -1,0 +1,7 @@
+#+HTML_LINK_UP: ../../../index.html
+#+HTML_LINK_HOME: ../../../index.html
+
+
+#+OPTIONS: html-style:nil
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../../css/org.css" />

@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("org-capture-last-stored"
+ (filename . "~/psnote_public/idear/idear-list.org")
+ (front-context-string . "** TODO \n  [2020")
+ (rear-context-string . "DO 三角函数\n* Tasks\n")
+ (position . 3009))
+("emacs-help"
+ (filename . "~/psnote/emacs/emacs.help.org")
+ (front-context-string . "【注意：位于【】之间的内容是译注")
+ (rear-context-string . "（查看版权声明请至本文末尾）\n\n")
+ (position . 28))
+)
