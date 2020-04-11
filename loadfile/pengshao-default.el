@@ -1,4 +1,17 @@
 
+
+
+
+;; 时间戳使用英文星期
+(setq system-time-locale "C")
+
+
+;; 编码选用 UTF-8
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
+
+
 ;;关闭起动时的那个“开机画面” 
 (setq inhibit-startup-message t)
 
@@ -14,9 +27,11 @@
 ;在标题栏提示你目前在什么位置
 (setq frame-title-format "pengshao@%n%b")
 ;;;设置标题栏显示文件的完整路径名
+;; buffer name (if the buffer isn't visiting a file)
 (setq frame-title-format
-   '("%S" (buffer-file-name "%f"
-    (dired-directory dired-directory "%b"))))
+      '("" " 上马提枪, 去干他娘 - "
+        (:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name)) "%b"))))
 
 ;语法高亮
 (global-font-lock-mode t)
@@ -56,6 +71,11 @@
 
 ;一打开就起用 text 模式。
 ;(setq default-major-mode 'text-mode)
+
+
+
+
+
 
 
 

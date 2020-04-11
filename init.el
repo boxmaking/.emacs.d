@@ -12,6 +12,7 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+
 (require 'pengshao-org-publish)
 
 
@@ -56,7 +57,7 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/lisp/ac-dict/")
 (ac-config-default)
-(define-key ac-mode-map (kbd "C-c c") 'auto-complete)
+(define-key ac-mode-map (kbd "C-x c") 'auto-complete)
 
 
 

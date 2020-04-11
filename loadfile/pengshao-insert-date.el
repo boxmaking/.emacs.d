@@ -21,4 +21,29 @@
 (global-set-key (kbd "C-c m m") 'my-insert-month)
 
 
+;;插入今年的时间进度条
+(defun make-progress (width percent has-number?)
+  (let* ((done (/ percent 100.0))
+         (done-width (floor (* width done))))
+    (concat
+     "["
+     (make-string done-width ?/)
+     (make-string (- width done-width) ? )
+     "]"
+     (if has-number? (concat " " (number-to-string percent) "%"))
+     )))
+
+(defun insert-day-progress ()
+  (interactive)
+  (let* ((today (time-to-day-in-year (current-time)))
+         (percent (floor (* 100 (/ today 365.0)))))
+    (insert (make-progress 30 percent t))
+    ))
+
+(global-set-key (kbd "C-c m y") 'insert-day-progress)
+
+(add-to-list 'org-src-lang-modes '("plantuml" . plantuml))
+
+
+
 (provide 'pengshao-insert-date)
