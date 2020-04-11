@@ -1,0 +1,83 @@
+* PengShao's .emscs.d
+
+
+* 配置目录的文件树
+
+#+BEGIN_EXAMPLE
+/home/pengshao/.emacs.d/
+├── ac-comphist.dat
+├── bookmarks
+├── init.el
+├── lisp
+│   ├── ac-dict
+│   │   ├── ada-mode
+│   │   ├── caml-mode
+│   │   ├── clojure-mode
+│   │   ├── clojurescript-mode
+│   │   ├── c++-mode
+│   │   ├── c-mode
+│   │   ├── coq-mode
+│   │   ├── css-mode
+│   │   ├── erlang-mode
+│   │   ├── ess-julia-mode
+│   │   ├── go-mode
+│   │   ├── haskell-mode
+│   │   ├── java-mode
+│   │   ├── js-mode
+│   │   ├── julia-mode
+│   │   ├── lua-mode
+│   │   ├── nim-mode
+│   │   ├── objc-mode
+│   │   ├── octave-mode
+│   │   ├── org-mode
+│   │   ├── php-mode
+│   │   ├── python-mode
+│   │   ├── qml-mode
+│   │   ├── ruby-mode
+│   │   ├── scala-mode
+│   │   ├── scheme-mode
+│   │   ├── sclang-mode
+│   │   ├── sh-mode
+│   │   ├── swift-mode
+│   │   ├── tcl-mode
+│   │   ├── ts-mode
+│   │   ├── tuareg-mode
+│   │   └── verilog-mode
+│   ├── auto-complete-config.el
+│   ├── auto-complete.el
+│   ├── auto-complete-pkg.el
+│   ├── browse-kill-ring.el
+│   ├── color-theme.el
+│   ├── htmlize.el
+│   ├── iimage.el
+│   ├── popup.el
+│   ├── tabbar.el
+│   ├── themes
+│   │   ├── color-theme-example.el
+│   │   └── color-theme-library.el
+│   └── word-like-count-mode.el
+├── loadfile
+│   ├── pengshao-backup.el
+│   ├── pengshao-calendar.el
+│   ├── pengshao-copy-cut-paste-killring.el
+│   ├── pengshao-default.el
+│   ├── pengshao-insert-date.el
+│   ├── pengshao-key-building.el
+│   ├── pengshao-org-mode.el
+│   └── pengshao-org-publish.el
+├── org-other-file
+│   ├── css
+│   │   ├── org2.css
+│   │   └── org.css
+│   ├── org-info.js
+│   ├── org-level-0.org
+│   ├── org-level-1.org
+│   └── org-level-3.org
+├── timelog
+└── url
+#+END_EXAMPLE
+
+
+* 我的配置文件
+#+INCLUDE:~/.emacs.d/init.el
+
