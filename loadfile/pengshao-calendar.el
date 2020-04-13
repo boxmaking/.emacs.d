@@ -1,5 +1,7 @@
-;;;; Created by pengshao on <2020-03-30/Monday 17:19:46>
-;;;; This file is used for customizing calendar and diary, and is called by .emacs
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; -*- coding: utf-8; lexical-binding: t -*-
+;;pengshao-calendar.el---calendar相关配置(一直没有调试)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;; 设置日历 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;设置日历的一些颜色

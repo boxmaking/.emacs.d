@@ -1,3 +1,9 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; -*- coding: utf-8; lexical-binding: t -*-
+;;pengshao-einsrt-date.el---插入时间格式相关的配置
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 (defun my-insert-time ()
   (interactive)
   (insert (format-time-string "<%Y-%m-%d/%A %H:%M:%S>" (current-time))))

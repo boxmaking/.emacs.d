@@ -1,4 +1,7 @@
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; -*- coding: utf-8; lexical-binding: t -*-
+;;pengshao-org-publish.el---org-publish相关的配置
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'ox-publish)
 (setq org-publish-project-alist

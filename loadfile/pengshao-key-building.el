@@ -1,7 +1,8 @@
-;;; pengshao-key-building.el --- 全局键盘绑定设置
-;;;
-;;; 最好放在加载文件的最后,防止被覆盖
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; -*- coding: utf-8; lexical-binding: t -*-
+;; pengshao-key-building.el --- 全局键盘绑定设置
+;; 最好放在加载文件的最后,防止被覆盖
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;习惯设置，Home键设定光标到文件开头
@@ -38,14 +39,16 @@
 ;(global-set-key [f3] 'redo)
 
 ;;F3,快速打开配置文件
-;;(global-set-key [f3] 'open-init-file)
-(global-set-key [f3] 'sr-speedbar-open)
+(global-set-key [f3] 'open-init-file)
+
 
 ;;F4,kill当前buffer
 (global-set-key [f4] 'kill-this-buffer)
 
 ;;F5,speedbar
 (global-set-key [f5] 'sr-speedbar-select-window)
+(global-set-key (kbd "C-c s") 'sr-speedbar-open)
+(global-set-key (kbd "C-c x") 'sr-speedbar-close)
 
 ;;F6,fired
 (global-set-key [f6] 'dired)
