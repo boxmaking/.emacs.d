@@ -53,13 +53,24 @@
    ))
 
 
-;; Face for TODO keywords TODO
+;; org-todo-keyword-faces
 (setq org-todo-keyword-faces
       '(
 	("TODO"      . (:foreground "#FF0033" :background "#FFFF33"  :weight bold))
 	("CANCELED"  . (:foreground "yellow" :background "#2E8B57"  :weight bold))
 	("DOING"     . (:foreground "#990066" :background "#00FF00"  :weight bold))
 	))
+
+
+;;'org-tag-faces'
+(setf org-tag-faces '(
+		      ("上班" . (:foreground "black" :background "#95A5A6"   :weight bold))
+                      ("休班" . (:foreground "red" :background "#2E8B57"  :weight bold))
+                      ;("DONE" . (:foreground "white" :background "#3498DB" :weight bold))
+		      )
+      )
+
+
 
 ;; 折叠时不再显示「...」, 换个你喜欢的符号
 (setq org-ellipsis "▼")
