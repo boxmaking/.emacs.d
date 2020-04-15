@@ -3,6 +3,15 @@
 ;;pengshao-org-mode.el---orgmode相关的配置
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;我的编码设置
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
+
+
+
 
 ;;org-mode语法高亮
 (setq org-src-fontify-natively t)
@@ -53,13 +62,23 @@
    ))
 
 
-;; Face for TODO keywords TODO
+;; org-todo-keyword-faces
 (setq org-todo-keyword-faces
       '(
 	("TODO"      . (:foreground "#FF0033" :background "#FFFF33"  :weight bold))
 	("CANCELED"  . (:foreground "yellow" :background "#2E8B57"  :weight bold))
 	("DOING"     . (:foreground "#990066" :background "#00FF00"  :weight bold))
 	))
+
+
+;;'org-tag-faces'
+(setf org-tag-faces '(
+		      ("上班" . (:foreground "black" :background "#95A5A6"   :weight bold))
+                      ("休班" . (:foreground "red" :background "#2E8B57"  :weight bold))
+                      ;("DONE" . (:foreground "white" :background "#3498DB" :weight bold))
+		      )
+      )
+
 
 ;; 折叠时不再显示「...」, 换个你喜欢的符号
 (setq org-ellipsis "▼")
