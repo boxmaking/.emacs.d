@@ -93,7 +93,7 @@
 ;;窗口跳转跳过sr-speedbar
 (setq sr-speedbar-skip-other-window-p t)
 ;;自动打开sr-speedbar
-;;不知道为什么太不好用了,总是多大开一个窗格
+;;不知道为什么太不好用了,总是多大开一个窗格,所以忽略了,
 ;;(sr-speedbar-open)
 
 ;;开机默认启动speedbar,现在用sr-speedbar了

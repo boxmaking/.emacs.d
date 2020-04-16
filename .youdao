@@ -1,2 +1,7 @@
 create
 visit
+require
+setq
+speedbar
+directory
+extract
