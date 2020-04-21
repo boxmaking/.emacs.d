@@ -11,8 +11,6 @@
 (setq default-buffer-file-coding-system 'utf-8)
 
 
-
-
 ;;org-mode语法高亮
 (setq org-src-fontify-natively t)
 
@@ -38,7 +36,6 @@
 (setq org-default-notes-file "~/psnote_public/idear/idear-list.org")
 
 
-
 ;;设置org-mode的启动显示选项,#+STARTUP: overview : content : showall : showeverything :
 (setq org-startup-folded 'content)
 
@@ -58,7 +55,7 @@
 ;定义多组状态序列，每个“#+SEQ_TODO”行定义一组
 (setq org-todo-keywords
  '((sequence "TODO(T!)" "DOING(H!)"  "|" "DONE(D!)" "CANCELED(C@/!)")
-   
+  
    ))
 
 
@@ -72,12 +69,12 @@
 
 
 ;;'org-tag-faces'
-(setf org-tag-faces '(
-		      ("上班" . (:foreground "black" :background "#95A5A6"   :weight bold))
-                      ("休班" . (:foreground "red" :background "#2E8B57"  :weight bold))
-                      ;("DONE" . (:foreground "white" :background "#3498DB" :weight bold))
-		      )
-      )
+(setf org-tag-faces
+      '(
+	("上班" . (:foreground "black" :background "#95A5A6"   :weight bold))
+        ("休班" . (:foreground "red" :background "#2E8B57"  :weight bold))
+       ;("DONE" . (:foreground "white" :background "#3498DB" :weight bold))
+	))
 
 
 

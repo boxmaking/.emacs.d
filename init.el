@@ -19,6 +19,8 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (require 'pengshao-org-publish)
+;;在pengshao-org-publish.el文件当中设置了
+;;(define-key global-map "\C-cp" 'org-publish)
 
 
 (require 'pengshao-calendar)
@@ -31,7 +33,8 @@
 
 (require 'pengshao-copy-cut-paste-killring)
 
-
+;;cua-rectangle-mark-mode的快捷键
+(global-set-key (kbd "C-c n") 'cua-rectangle-mark-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -48,6 +51,17 @@
 
 (require 'tabbar)
 (tabbar-mode)
+;;切换buffer
+;;prior就是上翻页pg up,next就是pg dn键盘
+;(global-set-key [C-prior] 'previous-buffer)
+;(global-set-key [C-next] 'next-buffer)
+
+;;Win更换tabbar不错吧,前两个是在不同的分组切换,后面的是在同组切换
+(global-set-key [s-up] 'tabbar-backward-group)
+(global-set-key [s-down] 'tabbar-backward-group)
+(global-set-key [s-left] 'tabbar-backward-tab)
+(global-set-key [s-right] 'tabbar-forward-tab)
+
 
 (require 'htmlize)
 
@@ -80,30 +94,23 @@
 
 
 (require 'sr-speedbar)
-;;左侧显示
-(setq sr-speedbar-right-side nil)
-;;宽度
-(setq sr-speedbar-width 25)
-;;显示.的头文件
-(setq speedbar-directory-unshown-regexp "^\(\.\.*$\)\'")
-;;设置快捷键,在快捷键配置文件内设置了
-;;(global-set-key [f5] 'sr-speedbar-select-window)
-;;(global-set-key (kbd "C-c s") 'sr-speedbar-open)
-;;(global-set-key (kbd "C-c x") 'sr-speedbar-close)
-;;窗口跳转跳过sr-speedbar
-(setq sr-speedbar-skip-other-window-p t)
+(setq sr-speedbar-right-side nil)     ;;左侧显示
+(setq sr-speedbar-width 25)          ;;宽度
+(setq speedbar-directory-unshown-regexp "^\(\.\.*$\)\'")       ;;显示.的头文件
+(setq sr-speedbar-skip-other-window-p t)            ;;窗口跳转跳过sr-speedbar
+;;设置快捷键
+(global-set-key [f5] 'sr-speedbar-select-window)
+(global-set-key (kbd "C-c s") 'sr-speedbar-open)
+(global-set-key (kbd "C-c x") 'sr-speedbar-close)
+
 ;;自动打开sr-speedbar
-;;不知道为什么太不好用了,总是多大开一个窗格,所以忽略了,
+;;不知道为什么太不好用了,每次都多打开一个窗格,所以忽略了,
 ;;(sr-speedbar-open)
 
-;;开机默认启动speedbar,现在用sr-speedbar了
+;;开机默认启动speedbar,不用了,现在用sr-speedbar了
 ;;(speedbar 1)
 
-
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;键盘配置放在最后
+;;键盘配置放在最后,只要是配置了F1-F10,和Home/End键,所有自己配置的都在init.el了,方便查找
 
 (require 'pengshao-key-building)

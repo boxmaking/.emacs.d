@@ -5,25 +5,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+
 ;;习惯设置，Home键设定光标到文件开头
 (global-set-key [(home)] 'beginning-of-buffer)
 ;;习惯设置，End键设定光标到文件结尾
 (global-set-key [(end)] 'end-of-buffer)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;切换buffer
-;;prior就是上翻页pg up,next就是pg dn键盘
-;(global-set-key [C-prior] 'previous-buffer)
-;(global-set-key [C-next] 'next-buffer)
-
-;;Win更换tabbar不错吧,前两个是在不同的分组切换,后面的是在同组切换
-(global-set-key [s-up] 'tabbar-backward-group)
-(global-set-key [s-down] 'tabbar-backward-group)
-(global-set-key [s-left] 'tabbar-backward-tab)
-(global-set-key [s-right] 'tabbar-forward-tab)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -45,12 +31,12 @@
 ;;F4,kill当前buffer
 (global-set-key [f4] 'kill-this-buffer)
 
-;;F5,speedbar
-(global-set-key [f5] 'sr-speedbar-select-window)
-(global-set-key (kbd "C-c s") 'sr-speedbar-open)
-(global-set-key (kbd "C-c x") 'sr-speedbar-close)
+;;F5,speedbar,在init.el设置了
+;;(global-set-key [f5] 'sr-speedbar-select-window)
+;;(global-set-key (kbd "C-c s") 'sr-speedbar-open)
+;;(global-set-key (kbd "C-c x") 'sr-speedbar-close)
 
-;;F6,fired
+;;F6,dired
 (global-set-key [f6] 'dired)
 
 ;;F7,eshell,shell,terminal-emulator
