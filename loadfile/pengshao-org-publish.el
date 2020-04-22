@@ -20,7 +20,7 @@
              :auto-sitemap t                  ; 自动生成 sitemap.org 文件
 	     :sitemap-filename "sitemap.org"  ; ... call it sitemap.org (it's the default)...
              :sitemap-title "PengShao's BLOG!"         ; ... with title
-             :sitemap-file-entry-format "%d %t"   ;这里采用时间+标题的方式生成sitemap 
+             ;;:sitemap-file-entry-format "%d %t"   ;这里采用时间+标题的方式生成sitemap 
 	     :style-include-default nil  ;禁用默认 css 样式,使用自定义css
 
 	     ;作为一个字符串给予 html-head 变量并插入到生成的 html 文件的head部
