@@ -7,9 +7,9 @@
 (setq org-publish-project-alist
       '(
          ("psnote-org"
-             :base-directory "~/psnote_public/"
+             :base-directory "~/public_note/"
              :base-extension "org"
-             :publishing-directory "~/note_site/"
+             :publishing-directory "~/public_site/"
              :recursive t     ;是否递归
              :publishing-function org-html-publish-to-html  ;使用哪个函数来进行publish（注：org 7与8在这个地方有区别）
              :headline-levels 2   ;由于大纲结构也用于列表和任务,因此只有前4个级别用作标题更深的级别会被看作项目列表,我设置的2
@@ -35,9 +35,9 @@
 
 
 	 ("psnote-static"
-             :base-directory "~/psnote_public/"
+             :base-directory "~/public_note/"
              :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|sh\\|el\\|jpeg\\|html"
-             :publishing-directory "~/note_site/"
+             :publishing-directory "~/public_site/"
              :recursive t
              :publishing-function org-publish-attachment
           )

@@ -73,7 +73,7 @@
       '(
 	("上班" . (:foreground "black" :background "#95A5A6"   :weight bold))
         ("休班" . (:foreground "red" :background "#2E8B57"  :weight bold))
-       ;("DONE" . (:foreground "white" :background "#3498DB" :weight bold))
+        ("加班" . (:foreground "white" :background "#3498DB" :weight bold))
 	))
 
 
