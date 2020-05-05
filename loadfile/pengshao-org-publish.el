@@ -26,9 +26,9 @@
 	     ;作为一个字符串给予 html-head 变量并插入到生成的 html 文件的head部
 	     ;因此里面的某些字符必须避免转义，比如双引号必须加上反斜杠
 	     ;href 的赋值不会做如何转换，因此必须确保是在生成的 html 文件能够访问的绝对路径。
-             ;html-home/up-format "<div id=\"org-div-home-and-up\"> <a accesskey=\"h\" href=\"/home/index.html\"> UP </a> | <a accesskey=\"H\" href=\"/home/index.html\"> HOME </a></div>"
+	     ;html-home/up-format"<div id=\"org-div-home-and-up\"> <a accesskey=\"h\" href=\"/home/index.html\"> UP </a> | <a accesskey=\"H\" href=\"/home/index.html\"> HOME </a></div>"
              ;html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"/home/css/org.css\"/>"
-
+	     :html-postamble "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-164487790-1\"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-164487790-1'); </script>"
 	     
          )
 
