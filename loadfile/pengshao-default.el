@@ -23,7 +23,7 @@
 
 ;;设置启动时候窗口大小
 (setq default-frame-alist
-'((height . 30) (width . 100) (menu-bar-lines . 0) (tool-bar-lines . 0)))
+'((height . 50) (width . 140) (menu-bar-lines . 10) (tool-bar-lines . 0)))
 
 
 ;在标题栏提示你目前在什么位置
@@ -46,7 +46,7 @@
 
 ;显示列号,显示行号码
 (column-number-mode t)
-(global-linum-mode t)
+;;(global-linum-mode t)最近不能永乐20241213
 
 ;显示括号匹配
 (show-paren-mode t)
