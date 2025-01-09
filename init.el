@@ -1,7 +1,6 @@
 ;; -*- coding: utf-8; lexical-binding: t -*-
 ;;pengshao's ~/.emacs.d/init.el
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun open-init-file()
@@ -51,6 +50,7 @@
 
 (require 'iimage)
 
+
 (require 'tabbar)
 (tabbar-mode)
 ;;切换buffer
@@ -59,16 +59,14 @@
 ;(global-set-key [C-next] 'next-buffer)
 
 ;;Win更换tabbar不错吧,前两个是在不同的分组切换,后面的是在同组切换
-(global-set-key [s-up] 'tabbar-backward-group)
-(global-set-key [s-down] 'tabbar-backward-group)
-(global-set-key [s-left] 'tabbar-backward-tab)
-(global-set-key [s-right] 'tabbar-forward-tab)
+;;不知道为什么冲突了
+;;(global-set-key [s-up] 'tabbar-backward-group)
+;;(global-set-key [s-down] 'tabbar-backward-group)
+;;(global-set-key [s-left] 'tabbar-backward-tab)
+;;(global-set-key [s-right] 'tabbar-forward-tab)
 
 
 (require 'htmlize)
-
-(require 'word-like-count-mode)
-(global-set-key "\C-xw" 'word-like-count-mode)
 
 (require 'browse-kill-ring)
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
@@ -82,16 +80,14 @@
 
 
 
-
-
-
 (require 'sr-speedbar)
 (setq sr-speedbar-right-side nil)     ;;左侧显示
 (setq sr-speedbar-width 25)          ;;宽度
 (setq speedbar-directory-unshown-regexp "^\(\.\.*$\)\'")       ;;显示.的头文件
 (setq sr-speedbar-skip-other-window-p t)            ;;窗口跳转跳过sr-speedbar
 ;;设置快捷键
-(global-set-key [f5] 'sr-speedbar-select-window)
+;(global-set-key [f5] 'sr-speedbar-select-window)
+(global-set-key [f5] 'sr-speedbar-open)
 (global-set-key (kbd "C-c s") 'sr-speedbar-open)
 (global-set-key (kbd "C-c x") 'sr-speedbar-close)
 
