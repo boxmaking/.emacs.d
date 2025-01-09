@@ -16,7 +16,9 @@
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
-(global-set-key "\C-cb" 'org-iswitchb)
+
+;;这一项好像不用了已经彻底结束了
+;;(global-set-key "\C-cb" 'org-iswitchb)
 
 (require 'pengshao-org-publish)
 ;;在pengshao-org-publish.el文件当中设置了
@@ -80,17 +82,7 @@
 
 
 
-(require 'youdao-dictionary)
-;; Enable Cache
-(setq url-automatic-caching t)
-;; Example Key binding
-(global-set-key (kbd "C-c y") 'youdao-dictionary-search-at-point)
-;; Integrate with popwin-el (https://github.com/m2ym/popwin-el)
-;; (push "*Youdao Dictionary*" popwin:special-display-config)
-;; Set file path for saving search history
-(setq youdao-dictionary-search-history-file "~/.emacs.d/.youdao")
-;; Enable Chinese word segmentation support (支持中文分词)
-;; (setq youdao-dictionary-use-chinese-word-segmentation t)
+
 
 
 (require 'sr-speedbar)
