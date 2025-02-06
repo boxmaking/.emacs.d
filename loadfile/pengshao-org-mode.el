@@ -19,21 +19,30 @@
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 
+;;(global-set-key "\C-cl" 'org-store-link)
+;;orgmode的链接
 
-;;如果不想在全局范围使用font-lock,可以用下面一句配置来只在Org-mode下打开font-lock选项
-;;(add-hook 'org-mode-hook 'turn-on-font-lock) 
 
 ;;设置默认的agenda文件,的todo的全局文件可以添加在这里
+;;(global-set-key "\C-ca" 'org-agenda)
 (setq org-agenda-files
-      (list "~/psnote_public/idear/idear-list.org"
-	    ))
+      (list "~/public_note/idear/list-list.org"
+	))
+
+
+;;(global-set-key "\C-cc" 'org-capture)
+;;默认的org-notesfile,这里就是org-capture的默认文件
+(setq org-default-notes-file "~/public_note/idear/todo-list.org")
+
 
 ;;每次新建todo和做完都要添加时间
 ;(setq org-log-todo 'time)
 ;(setq org-log-done 'time)
 
-;;默认的org-notesfile
-(setq org-default-notes-file "~/psnote_public/idear/idear-list.org")
+
+;;如果不想在全局范围使用font-lock,可以用下面一句配置来只在Org-mode下打开font-lock选项
+;;(add-hook 'org-mode-hook 'turn-on-font-lock) 
+
 
 
 ;;设置org-mode的启动显示选项,#+STARTUP: overview : content : showall : showeverything :
@@ -57,7 +66,7 @@
  '((sequence "TODO(T!)" "DOING(H!)"  "|" "DONE(D!)" "CANCELED(C@/!)")
   
    ))
-
+ 
 
 ;; org-todo-keyword-faces
 (setq org-todo-keyword-faces

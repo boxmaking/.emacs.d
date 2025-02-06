@@ -44,9 +44,13 @@
 (auto-image-file-mode t)
 
 
-;显示列号,显示行号码
+;显示列号
 (column-number-mode t)
-;;(global-linum-mode t)最近不能永乐20241213
+;显示行号
+(global-display-line-numbers-mode t)
+(setq display-line-numbers-type 'absolute) 
+
+
 
 ;显示括号匹配
 (show-paren-mode t)
@@ -75,12 +79,6 @@
 
 ;一打开就起用 text 模式。
 ;(setq default-major-mode 'text-mode)
-
-
-
-
-
-
 
 
 (provide 'pengshao-default)

@@ -79,7 +79,6 @@
 (define-key ac-mode-map (kbd "C-c q") 'auto-complete)
 
 
-
 (require 'sr-speedbar)
 (setq sr-speedbar-right-side nil)     ;;左侧显示
 (setq sr-speedbar-width 25)          ;;宽度
@@ -91,14 +90,33 @@
 (global-set-key (kbd "C-c s") 'sr-speedbar-open)
 (global-set-key (kbd "C-c x") 'sr-speedbar-close)
 
+
+
+;;开机默认启动speedbar,不用了,现在用sr-speedbar了
+;;(speedbar 1)
 ;;自动打开sr-speedbar
 ;;不知道为什么太不好用了,每次都多打开一个窗格,所以忽略了,
 ;;(sr-speedbar-open)
 
-;;开机默认启动speedbar,不用了,现在用sr-speedbar了
-;;(speedbar 1)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;键盘配置放在最后,只要是配置了F1-F10,和Home/End键,所有自己配置的都在init.el了,方便查找
 
 (require 'pengshao-key-building)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-safe-remote-resources
+   '("\\`https://fniessen\\.github\\.io/org-html-themes/setup/theme-readtheorg\\.setup\\'")))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
+(require 'pengshao-converttime)
