@@ -8,9 +8,24 @@
   (find-file "~/.emacs.d/init.el"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; 东八区（北京时间）
+(setq calendar-time-zone 8)  
+
+(require 'package)
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")t)
+(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+
 ;;自己的一些小的配置
 (add-to-list 'load-path "~/.emacs.d/loadfile/")
 
+;自动插入天气的配置
+(require 'pengshao-openweather)
+
+;第一项是链接,第二项是待办事项,第三项是总结
 (require 'pengshao-org-mode)
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
@@ -25,6 +40,8 @@
 
 
 (require 'pengshao-calendar)
+
+
 
 (require 'pengshao-default)
 
@@ -49,6 +66,18 @@
 (color-theme-snow)
 
 (require 'iimage)
+
+
+(require 'cal-china-x)
+(setq calendar-mark-holidays-flag t)
+;; (setq mark-holidays-in-calendar t) ; before emacs-25
+(setq cal-china-x-important-holidays cal-china-x-chinese-holidays)
+(setq cal-china-x-general-holidays '((holiday-lunar 1 15 "元宵节")))
+(setq calendar-holidays
+      (append cal-china-x-important-holidays
+              cal-china-x-general-holidays
+              ;;other-holidays
+ 	      ))
 
 
 (require 'tabbar)
@@ -110,7 +139,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(org-safe-remote-resources
-   '("\\`https://fniessen\\.github\\.io/org-html-themes/setup/theme-readtheorg\\.setup\\'")))
+   '("\\`https://fniessen\\.github\\.io/org-html-themes/setup/theme-readtheorg\\.setup\\'"))
+ '(package-selected-packages '(json-mode request)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
