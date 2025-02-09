@@ -19,6 +19,9 @@
 (package-initialize)
 
 
+
+
+
 ;;自己的一些小的配置
 (add-to-list 'load-path "~/.emacs.d/loadfile/")
 
@@ -84,8 +87,8 @@
 (tabbar-mode)
 ;;切换buffer
 ;;prior就是上翻页pg up,next就是pg dn键盘
-;(global-set-key [C-prior] 'previous-buffer)
-;(global-set-key [C-next] 'next-buffer)
+(global-set-key [C-prior] 'previous-buffer)
+(global-set-key [C-next] 'next-buffer)
 
 ;;Win更换tabbar不错吧,前两个是在不同的分组切换,后面的是在同组切换
 ;;不知道为什么冲突了
@@ -119,14 +122,17 @@
 (global-set-key (kbd "C-c s") 'sr-speedbar-open)
 (global-set-key (kbd "C-c x") 'sr-speedbar-close)
 
-
-
 ;;开机默认启动speedbar,不用了,现在用sr-speedbar了
 ;;(speedbar 1)
 ;;自动打开sr-speedbar
 ;;不知道为什么太不好用了,每次都多打开一个窗格,所以忽略了,
 ;;(sr-speedbar-open)
 
+;;diff
+;;Select a region and run the command diff-lisp-mark-selected-text-as-a.
+;;Select another region and run diff-lisp-diff-a-and-b.
+;;The difference of two region is displayed in a buffer.
+(require 'diff-lisp)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -149,4 +155,10 @@
  )
 
 
-(require 'pengshao-converttime)
+
+;; 在 Emacs 启动时清空 *scratch* 缓冲区并插入特定函数代码
+(setq initial-scratch-message "") ; 清空初始的 *scratch* 消息
+(with-current-buffer "*scratch*"
+   (let ((result1 (insert-weather)))
+    (insert (format " %s\n" result1)))
+  (call-interactively 'insert-pyphoon))
