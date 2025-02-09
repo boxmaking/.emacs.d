@@ -7,6 +7,8 @@
 ;; 时间戳使用英文星期
 (setq system-time-locale "C")
 
+; 东八区（北京时间）
+(setq calendar-time-zone 8)  
 
 ;; 编码选用 UTF-8
 (prefer-coding-system 'utf-8)
@@ -16,6 +18,10 @@
 
 ;;关闭起动时的那个“开机画面” 
 (setq inhibit-startup-message t)
+
+;;自动显示图片
+(setq org-startup-with-inline-images t)
+
 
 ;;(split-window-below)   ;; 横向分屏
 ;;(split-window-right)   ;; 纵向分屏
@@ -79,6 +85,15 @@
 
 ;一打开就起用 text 模式。
 ;(setq default-major-mode 'text-mode)
+
+;;eshell增加自动补全
+; 忽略大小写进行补全
+(setq eshell-cmpl-ignore-case t)
+; 允许循环补全
+(setq eshell-cmpl-cycle-completions t)
+; 让 pcomplete 支持循环补全
+(setq pcomplete-cycle-completions t) 
+
 
 
 (provide 'pengshao-default)

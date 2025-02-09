@@ -1,5 +1,6 @@
 ;; -*- coding: utf-8; lexical-binding: t -*-
 ;;pengshao's ~/.emacs.d/init.el
+;;<2025-02-09/Sunday 19:23:31>
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -9,8 +10,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; 东八区（北京时间）
-(setq calendar-time-zone 8)  
 
 (require 'package)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")t)
@@ -19,8 +18,8 @@
 (package-initialize)
 
 
-
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;自己的一些小的配置
 (add-to-list 'load-path "~/.emacs.d/loadfile/")
@@ -28,12 +27,12 @@
 ;自动插入天气的配置
 (require 'pengshao-openweather)
 
-;第一项是链接,第二项是待办事项,第三项是总结
+;;orgmode的全局设置
+;;第一项是链接,第二项是待办事项,第三项是总结
 (require 'pengshao-org-mode)
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
-
 ;;这一项好像不用了已经彻底结束了
 ;;(global-set-key "\C-cb" 'org-iswitchb)
 
@@ -54,23 +53,27 @@
 
 (require 'pengshao-copy-cut-paste-killring)
 
-;;cua-rectangle-mark-mode的快捷键
+;;cuamode的cua-rectangle-mark-mode的快捷键
+;;由于与orgmode有冲突,我爸C-return改为
 (global-set-key (kbd "C-c n") 'cua-rectangle-mark-mode)
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;加载别的插件
+;;加载下载的插件
 
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
+;;主题插件的配置文件
 (require 'color-theme)
 (color-theme-initialize)
 (color-theme-snow)
 
 (require 'iimage)
 
-
+;;日历显示农历
 (require 'cal-china-x)
 (setq calendar-mark-holidays-flag t)
 ;; (setq mark-holidays-in-calendar t) ; before emacs-25
@@ -82,14 +85,13 @@
               ;;other-holidays
  	      ))
 
-
+;;小小的tabbar-mode
 (require 'tabbar)
 (tabbar-mode)
 ;;切换buffer
 ;;prior就是上翻页pg up,next就是pg dn键盘
 (global-set-key [C-prior] 'previous-buffer)
 (global-set-key [C-next] 'next-buffer)
-
 ;;Win更换tabbar不错吧,前两个是在不同的分组切换,后面的是在同组切换
 ;;不知道为什么冲突了
 ;;(global-set-key [s-up] 'tabbar-backward-group)
@@ -112,16 +114,19 @@
 
 
 (require 'sr-speedbar)
-(setq sr-speedbar-right-side nil)     ;;左侧显示
-(setq sr-speedbar-width 25)          ;;宽度
-(setq speedbar-directory-unshown-regexp "^\(\.\.*$\)\'")       ;;显示.的头文件
-(setq sr-speedbar-skip-other-window-p t)            ;;窗口跳转跳过sr-speedbar
+;;左侧显示
+(setq sr-speedbar-right-side nil)     
+;;宽度
+(setq sr-speedbar-width 25)          
+;;显示.的头文件
+(setq speedbar-directory-unshown-regexp "^\(\.\.*$\)\'")
+;;窗口跳转跳过sr-speedbar
+(setq sr-speedbar-skip-other-window-p t)
 ;;设置快捷键
 ;(global-set-key [f5] 'sr-speedbar-select-window)
 (global-set-key [f5] 'sr-speedbar-open)
 (global-set-key (kbd "C-c s") 'sr-speedbar-open)
 (global-set-key (kbd "C-c x") 'sr-speedbar-close)
-
 ;;开机默认启动speedbar,不用了,现在用sr-speedbar了
 ;;(speedbar 1)
 ;;自动打开sr-speedbar
@@ -135,8 +140,15 @@
 (require 'diff-lisp)
 
 
+;;orgmode的大纲主题
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;键盘配置放在最后,只要是配置了F1-F10,和Home/End键,所有自己配置的都在init.el了,方便查找
+;;键盘配置放在最后,只要是配置了F1-F10,和Home/End键
+;;所有自己配置的都在init.el了,方便查找
 
 (require 'pengshao-key-building)
 (custom-set-variables
