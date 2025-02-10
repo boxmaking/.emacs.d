@@ -29,7 +29,7 @@
 
 ;;设置启动时候窗口大小
 (setq default-frame-alist
-'((height . 30) (width . 140) (menu-bar-lines . 10) (tool-bar-lines . 10)))
+'((height . 30) (width . 100) (menu-bar-lines . 10) (tool-bar-lines . 10)))
 
 
 ;在标题栏提示你目前在什么位置

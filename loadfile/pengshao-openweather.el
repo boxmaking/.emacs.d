@@ -22,6 +22,11 @@
 (global-set-key (kbd "C-c m o") #'insert-pyphoon)
 
 
+(defun insert-nongli ()
+  (interactive)
+  (insert (shell-command-to-string "~/.emacs.d/loadfile/nongli.sh")))
+
+(global-set-key (kbd "C-c m n") #'insert-nongli)
 
 
 (provide 'pengshao-openweather)

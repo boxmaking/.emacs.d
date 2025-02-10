@@ -171,6 +171,10 @@
 ;; 在 Emacs 启动时清空 *scratch* 缓冲区并插入特定函数代码
 (setq initial-scratch-message "") ; 清空初始的 *scratch* 消息
 (with-current-buffer "*scratch*"
-   (let ((result1 (insert-weather)))
-    (insert (format " %s\n" result1)))
-  (call-interactively 'insert-pyphoon))
+;   (let ((result1 (insert-weather)))
+;   (insert (format " %s\n" result1)))
+  (call-interactively 'insert-nongli)
+  (call-interactively 'insert-weather)
+  (call-interactively 'insert-pyphoon)
+  
+   )
