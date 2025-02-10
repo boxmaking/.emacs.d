@@ -28,6 +28,13 @@
 
 (global-set-key (kbd "C-c m n") #'insert-nongli)
 
+(defun insert-nonglijian ()
+  (interactive)
+  (insert (shell-command-to-string "~/.emacs.d/loadfile/nonglijian.sh")))
+
+(global-set-key (kbd "C-c m j") #'insert-nonglijian)
+
+
 
 (provide 'pengshao-openweather)
 

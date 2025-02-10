@@ -53,9 +53,8 @@
 
 (require 'pengshao-copy-cut-paste-killring)
 
-;;cuamode的cua-rectangle-mark-mode的快捷键
-;;由于与orgmode有冲突,我爸C-return改为
-(global-set-key (kbd "C-c n") 'cua-rectangle-mark-mode)
+
+
 
 
 
@@ -72,6 +71,10 @@
 (color-theme-snow)
 
 (require 'iimage)
+
+;;cuamode的cua-rectangle-mark-mode的快捷键
+;;由于与orgmode有冲突,我把C-return改为
+(global-set-key (kbd "C-c n") 'cua-rectangle-mark-mode)
 
 ;;日历显示农历
 (require 'cal-china-x)
@@ -100,7 +103,6 @@
 ;;(global-set-key [s-right] 'tabbar-forward-tab)
 
 
-(require 'htmlize)
 
 (require 'browse-kill-ring)
 (global-set-key (kbd "C-c k") 'browse-kill-ring)
@@ -133,16 +135,6 @@
 ;;不知道为什么太不好用了,每次都多打开一个窗格,所以忽略了,
 ;;(sr-speedbar-open)
 
-;;diff
-;;Select a region and run the command diff-lisp-mark-selected-text-as-a.
-;;Select another region and run diff-lisp-diff-a-and-b.
-;;The difference of two region is displayed in a buffer.
-(require 'diff-lisp)
-
-
-;;orgmode的大纲主题
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 
 
