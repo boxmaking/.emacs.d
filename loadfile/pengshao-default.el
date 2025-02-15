@@ -39,7 +39,7 @@
 
 ;; buffer name (if the buffer isn't visiting a file)
 (setq frame-title-format
-      '("" "上古大椿，八千春秋,知途知径，浑然天成"
+      '("" "上古大椿,八千春秋,知途知径,浑然天成."
         (:eval (if (buffer-file-name)
                    (abbreviate-file-name (buffer-file-name)) "%b"))))
 

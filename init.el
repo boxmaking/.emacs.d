@@ -24,6 +24,12 @@
 ;;自己的一些小的配置
 (add-to-list 'load-path "~/.emacs.d/loadfile/")
 
+
+;;mobileorg配置文件
+;;(require 'pengshao-mobileorg)
+
+
+
 ;自动插入天气的配置
 (require 'pengshao-openweather)
 
@@ -148,6 +154,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-agenda-files nil)
  '(org-safe-remote-resources
    '("\\`https://fniessen\\.github\\.io/org-html-themes/setup/theme-readtheorg\\.setup\\'"))
  '(package-selected-packages '(json-mode request)))
