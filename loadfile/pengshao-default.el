@@ -19,6 +19,10 @@
 ;;关闭起动时的那个“开机画面” 
 (setq inhibit-startup-message t)
 
+;;开始启动历史文件记录
+(recentf-mode 1)
+(global-set-key (kbd "C-c m h") 'recentf-open-files)
+
 ;;自动显示图片
 (setq org-startup-with-inline-images t)
 

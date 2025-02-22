@@ -4,9 +4,9 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/public_note/idear/todo-list.org")
- (front-context-string . "** TODO [#A] 赶紧的")
- (rear-context-string . "thub算了,感觉也用不太到.\n")
- (position . 1464))
+ (front-context-string . "** TODO org-mode")
+ (rear-context-string . "2-22 Sat 23:14]\n")
+ (position . 1897))
 ("emacs-help"
  (filename . "~/psnote/emacs/emacs.help.org")
  (front-context-string . "【注意：位于【】之间的内容是译注")

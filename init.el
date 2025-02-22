@@ -12,10 +12,17 @@
 
 
 (require 'package)
-(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")t)
-(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(setq package-archives
+      '(("gnu"   . "https://elpa.gnu.org/packages/")
+        ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
+
+
+;;允许升级内建包
+(setq package-install-upgrade-built-in t)
+
+
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -70,6 +77,11 @@
 
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+
+
+(require 'magit)
+(global-set-key (kbd "C-c m g") 'magit-status) ; 绑定快捷键
+(setq magit-git-executable "/usr/bin/git")    ; 指定Git路径
 
 ;;主题插件的配置文件
 (require 'color-theme)
@@ -157,7 +169,7 @@
  '(org-agenda-files nil)
  '(org-safe-remote-resources
    '("\\`https://fniessen\\.github\\.io/org-html-themes/setup/theme-readtheorg\\.setup\\'"))
- '(package-selected-packages '(json-mode request)))
+ '(package-selected-packages '(magit seq json-mode request)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

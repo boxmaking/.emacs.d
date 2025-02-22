@@ -28,7 +28,8 @@
 	     ;href 的赋值不会做如何转换，因此必须确保是在生成的 html 文件能够访问的绝对路径。
 	     ;html-home/up-format"<div id=\"org-div-home-and-up\"> <a accesskey=\"h\" href=\"/home/index.html\"> UP </a> | <a accesskey=\"H\" href=\"/home/index.html\"> HOME </a></div>"
              ;html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"/home/css/org.css\"/>"
-	     :html-postamble "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-164487790-1\"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-164487790-1'); </script>"
+	     ;html-postamble "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-164487790-1\"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-164487790-1'); </script>"
+	     ;HTML_EXPORT_POSTamble: "<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"> </script>
 	     
          )
 

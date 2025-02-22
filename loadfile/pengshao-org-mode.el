@@ -31,9 +31,26 @@
 
 
 ;;(global-set-key "\C-cc" 'org-capture)
+;;这个设置在init.el文件中.
 ;;默认的org-notesfile,这里就是org-capture的默认文件
 (setq org-default-notes-file "~/public_note/idear/todo-list.org")
+(setq org-capture-templates
+      '(("t" "Todo item" entry
+	 (file+headline "~/public_note/idear/todo-list.org" "Tasks")
+	 "* TODO %?\n  SCHEDULED: %T\n  %i\n %a\n Created: %U")
 
+	("w" "Web link" entry
+	 (file+headline "~/public_note/share/mybookmarks.org" "bookmarks-temp")
+	 "* %?  :WEB:\n [[https://%^{URL}][%^{Description}]]\n:PROPERTIES:\n:Description: %^{Description}\n:END:")
+
+	("a" "Article excerpt" entry
+	 (file+headline "~/public_note/idear/article-excerpt.org" "think-temp")
+	 "* %? :ARTICLE:\n:PROPERTIES:\n:Excerpt: %^{Excerpt}\n:Source: %^{Source}\n:END:")
+
+	("s" "Personal statement" entry
+	 (file+headline "~/life-note/mylife/personal-statement.org" "think-temp")
+	 "* %? :STATEMENT:\n:PROPERTIES:\n:Thought: %^{Thought}\n:END:"))
+      )
 
 ;;每次新建todo和做完都要添加时间
 ;(setq org-log-todo 'time)

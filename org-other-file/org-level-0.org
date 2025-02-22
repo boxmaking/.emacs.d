@@ -7,7 +7,6 @@
 #+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-
 # HTML_HEAD: <link rel="alternate stylesheet" type="text/css" href="./css/orgcom2.css" />
 # HTML_HEAD: <link rel="alternate stylesheet" type="text/css" href="./css/orgcom.css" />
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/org.css" />
@@ -19,3 +18,10 @@
 
 #+STARTUP: showall
 #+OPTIONS: H3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+
+
+#+HTML_HEAD: <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+#+HTML_HEAD: <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+
+#+HTML_HEAD: <span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>

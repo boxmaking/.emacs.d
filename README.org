@@ -2,7 +2,7 @@
   [[https://boxmaking.github.io/emacs/emacs-init.html]]
 
 * 首页
-[[file:20250209.png]]
+[[file:emacs-init.png]]
 
 
 

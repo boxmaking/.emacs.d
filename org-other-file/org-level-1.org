@@ -5,7 +5,6 @@
 #+HTML_DOCTYPE: html5
 #+HTML_HEAD: <meta http-equiv="X-UA-Compatible" content="IE=edge">
 #+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1">
-
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../css/org.css" />
 
 
@@ -14,4 +13,8 @@
 
 
 #+STARTUP: showall
+
+#+HTML_HEAD: <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+#+HTML_HEAD: <span id="busuanzi_container_page_pv">所有文章阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+
 
