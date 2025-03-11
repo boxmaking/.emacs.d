@@ -36,8 +36,11 @@
 ;;(require 'pengshao-mobileorg)
 
 
+;默认的配置文件
+(require 'pengshao-default)
 
-;自动插入天气的配置
+
+;自动插入天气的配置,月相,农历两个shellscript的,el文件 
 (require 'pengshao-openweather)
 
 ;;orgmode的全局设置
@@ -55,10 +58,6 @@
 
 
 (require 'pengshao-calendar)
-
-
-
-(require 'pengshao-default)
 
 (require 'pengshao-backup)
 
