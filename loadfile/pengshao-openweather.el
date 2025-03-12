@@ -18,7 +18,6 @@
   (interactive)
   (insert (shell-command-to-string "source ~/mypython/bin/activate && pyphoon")))
 
-
 (global-set-key (kbd "C-c m o") #'insert-pyphoon)
 
 
@@ -35,6 +34,18 @@
 (global-set-key (kbd "C-c m j") #'insert-nonglijian)
 
 
+;; 定义一个函数来插入 MOON-TODAY drawer 并调用 insert-pyphoon 函数
+(defun insert-moon-today-drawer-with-pyphoon ()
+  "Insert a MOON-TODAY drawer at the current line and call insert-pyphoon inside it."
+  (interactive)
+  (insert ":MOON-TODAY:\n")
+  (call-interactively 'insert-pyphoon)
+  (insert ":END:\n"))
+
+;; 绑定快捷键 C-c m c 到 insert-moon-today-drawer-with-pyphoon 函数
+(add-hook 'org-mode-hook
+          (lambda ()
+            (local-set-key (kbd "C-c m c") 'insert-moon-today-drawer-with-pyphoon)))
 
 (provide 'pengshao-openweather)
 
