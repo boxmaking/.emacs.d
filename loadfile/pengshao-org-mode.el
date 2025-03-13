@@ -44,11 +44,12 @@
 	 "* %?  :WEB:\n [[https://%^{URL}][%^{Description}]]\n:PROPERTIES:\n:Description: %^{Description}\n:END:")
 
 	("a" "Article excerpt" entry
-	 (file+headline "~/public_note/idear/article-excerpt.org" "think-temp")
-	 "* %? :ARTICLE:\n:PROPERTIES:\n:Excerpt: %^{Excerpt}\n:Source: %^{Source}\n:END:")
-
+	 (file "~/personal_note/article-excerpt.org") ; 直接插入文件根层级
+	 "* %^{输入标题} :ARTICLE:\n:PROPERTIES:\n:描述: %^{描述}\n:来源: %^{来源}\n:插入时间: %U\n:END:"
+	 :empty-lines 1)
+	
 	("s" "Personal statement" entry
-	 (file+headline "~/life-note/mylife/personal-statement.org" "think-temp")
+	 (file+headline "~/personal_note/personal-statement.org" "think-temp")
 	 "* %? :STATEMENT:\n:PROPERTIES:\n:Thought: %^{Thought}\n:END:"))
       )
 

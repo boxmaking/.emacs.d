@@ -8,7 +8,7 @@
 ;; 设置单词本和短语本的 org 文件路径
 
 ;; 定义文件路径
-(defvar pengshao-english-file "~/life-note/pengshao-english.org"
+(defvar pengshao-english-file "~/personal_note/pengshao-english.org"
   "File path for storing English vocabulary.")
 
 ;; 确保文件存在并初始化基本结构
