@@ -3,10 +3,10 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
- (filename . "~/public_note/idear/article-excerpt.org")
- (front-context-string . "** 英雄不信命数,寂寞路攀险峰")
- (rear-context-string . ":Source: \n:END:\n")
- (position . 464))
+ (filename . "~/personal_note/article-excerpt.org")
+ (front-context-string . "* hh :ARTICLE:\n:")
+ (rear-context-string . "u 22:42]\n:END:\n\n")
+ (position . 4278))
 ("emacs-help"
  (filename . "~/psnote/emacs/emacs.help.org")
  (front-context-string . "【注意：位于【】之间的内容是译注")
