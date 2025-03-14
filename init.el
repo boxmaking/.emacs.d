@@ -45,6 +45,10 @@
 ;自动插入天气的配置,月相,农历两个shellscript的,el文件 
 (require 'pengshao-openweather)
 
+;自动插入名人名言
+(require 'pengshao-insert-think-deep)
+
+
 ;调用翻译
 (require 'pengshao-translate)
 
@@ -192,5 +196,5 @@
   (call-interactively 'insert-nongli)
   (call-interactively 'insert-weather)
   (call-interactively 'insert-pyphoon)
-  
+  (call-interactively 'insert-think-deep)
    )
