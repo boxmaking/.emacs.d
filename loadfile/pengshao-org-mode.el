@@ -33,10 +33,10 @@
 ;;(global-set-key "\C-cc" 'org-capture)
 ;;这个设置在init.el文件中.
 ;;默认的org-notesfile,这里就是org-capture的默认文件
-(setq org-default-notes-file "~/public_note/idear/todo-list.org")
+(setq org-default-notes-file "~/personal_note/todo-list.org")
 (setq org-capture-templates
       '(("t" "Todo item" entry
-	 (file+headline "~/public_note/idear/todo-list.org" "Tasks")
+	 (file+headline "~/personal_note/todo-list.org" "Tasks")
 	 "* TODO %?\n  SCHEDULED: %T\n  %i\n %a\n Created: %U")
 
 	("w" "Web link" entry
