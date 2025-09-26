@@ -7,7 +7,7 @@
 ;;添加济南天气的操作
 (defun insert-weather ()
   (interactive)
-  (insert (shell-command-to-string "curl wttr.in/jinan?format=4 2> /dev/null")))
+  (insert (shell-command-to-string "curl wttr.in/颜庄@36.0711,117.4628?format=4 2> /dev/null")))
 
 
 (global-set-key (kbd "C-c m w") #'insert-weather)

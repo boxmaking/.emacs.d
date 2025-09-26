@@ -141,6 +141,7 @@
 (ac-config-default)
 (define-key ac-mode-map (kbd "C-c q") 'auto-complete)
 
+(require 'org-tempo)
 
 (require 'sr-speedbar)
 ;;左侧显示
